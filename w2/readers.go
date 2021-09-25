@@ -5,7 +5,7 @@ import "golang.org/x/tour/reader"
 type MyReader struct{}
 
 func (reader MyReader) Read(b []byte) (int, error) {
-	for i, _ := range b {
+	for i := range b {
 		b[i] = 'A'
 	}
 	return len(b), nil
