@@ -22,7 +22,7 @@ func worker(id int, tasks <-chan int, results chan<- int) {
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	
+
 	taskCnt := 6
 	workerCnt := 2
     tasks := make(chan int, taskCnt)
